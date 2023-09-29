@@ -1,0 +1,21 @@
+version: "3"
+
+tasks:
+  docker-build:
+    desc: Create docker image
+    cmds:
+      - docker build -t alexwilkerson/hello .
+
+  docker-tag:
+    desc: Tag docker image
+    cmds:
+      - docker tag alexwilkerson/hello:latest alexwilkerson/hello:latest
+
+  docker-push:
+    desc: Push docker image
+    cmds:
+      - docker push alexwilkerson/hello:latest
+
+  publish:
+    desc: Publish docker image
+    deps: [docker-build, docker-tag, docker-push]
