@@ -1,14 +1,8 @@
+---
 kind: pipeline
-name: test
-
-# workspace:
-#   path: /drone/src/github.com/nytimes/offer-presentation
+name: default
 
 steps:
 - name: hello
   pull: if-not-exists
   image: alexwilkerson/hello
-  # when:
-  #   event:
-  #   - push
-  #   - tag
