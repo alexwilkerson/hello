@@ -3,6 +3,11 @@ kind: pipeline
 name: default
 
 steps:
+- name: message
+  image: alpine
+  commands:
+    - echo $DRONE_SEMVER
+
 - name: hello
   pull: if-not-exists
   image: alexwilkerson/hello
