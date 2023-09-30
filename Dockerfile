@@ -1,4 +1,3 @@
-FROM alpine
+FROM golang:1.21
 ADD hello /bin/
-RUN apk -Uuv add bash ca-certificates
-CMD ["echo", "Hello World!"]
+ENTRYPOINT ["/bin/hello"]

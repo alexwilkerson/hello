@@ -10,4 +10,4 @@ steps:
 
 - name: hello
   pull: if-not-exists
-  image: alexwilkerson/hello
+  image: alexwilkerson/drone-go-coverage
