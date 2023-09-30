@@ -11,5 +11,7 @@ steps:
 - name: hello
   pull: always
   image: alexwilkerson/drone-go-coverage:latest
+  cmds:
+    - which go
   settings:
     coverage_threshold: 50
