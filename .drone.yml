@@ -11,3 +11,5 @@ steps:
 - name: hello
   pull: if-not-exists
   image: alexwilkerson/drone-go-coverage
+  settings:
+    coverage_threshold: 50
