@@ -9,7 +9,7 @@ steps:
     - echo $DRONE_SEMVER
 
 - name: hello
-  pull: if-not-exists
+  pull: always
   image: alexwilkerson/drone-go-coverage:latest
   settings:
     coverage_threshold: 50
