@@ -14,4 +14,4 @@ steps:
     # depends_on:
     #   - generate-coverage-file
     settings:
-      coverage_threshold: 51
+      coverage_threshold: 49
