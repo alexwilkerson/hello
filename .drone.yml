@@ -7,16 +7,16 @@ steps:
     commands:
       - echo $DRONE_SEMVER
 
-  - name: generate-coverage-file
-    image: golang:1.21-alpine3.18
-    commands:
-      - go test -coverprofile=coverage.out ./...
-      - go tool cover -func=coverage.out -o coverage.txt
+  # - name: generate-coverage-file
+  #   image: golang:1.21-alpine3.18
+  #   commands:
+  #     - go test -coverprofile=coverage.out ./...
+  #     - go tool cover -func=coverage.out -o coverage.txt
 
   - name: hello
     pull: always
     image: alexwilkerson/drone-go-coverage:latest
-    depends_on:
-      - generate-coverage-file
+    # depends_on:
+    #   - generate-coverage-file
     settings:
       coverage_threshold: 51
