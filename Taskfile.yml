@@ -4,7 +4,7 @@ tasks:
   docker-build:
     desc: Create docker image
     cmds:
-      - docker build -t alexwilkerson/hello .
+      - docker build --no-cache -t alexwilkerson/hello .
 
   docker-tag:
     desc: Tag docker image
